@@ -1,14 +1,26 @@
 import pandas as pd
 import streamlit as st
 import pickle
-from tensorflow.keras.models import load_model
 
 # Load Model, scaler, encoders
 
-model=load_model('Churn_Modelling.h5')
-label_encoder_gender = pickle.load(open('label_encoder_gender.pkl', 'rb'))
-onehot_encoder_geo = pickle.load(open('OHE_geo.pickle', 'rb'))
-scaler = pickle.load(open('scaler.pickle', 'rb'))  
+with open('Churn_Modelling.h5', 'rb') as file:
+    model = pickle.load(file) 
+
+with open('label_encoder_gender.pkl', 'rb') as file:
+    label_encoder_gender = pickle.load(file)
+
+with open('OHE_geo.pickle', 'rb') as file:
+    onehot_encoder_geo = pickle.load(file)
+
+with open('scaler.pickle', 'rb') as file:
+    scaler = pickle.load(file)
+
+
+# model=load_model('Churn_Modelling.h5')
+# label_encoder_gender = pickle.load(open('label_encoder_gender.pkl', 'rb'))
+# onehot_encoder_geo = pickle.load(open('OHE_geo.pickle', 'rb'))
+# scaler = pickle.load(open('scaler.pickle', 'rb'))  
 
 ## TITLE OF THE APP
 st.title("Customer Churn Prediction")
