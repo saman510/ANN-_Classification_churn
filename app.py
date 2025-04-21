@@ -1,12 +1,7 @@
 import pandas as pd
 import streamlit as st
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler, LabelEncoder
 import pickle
 import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense
-from tensorflow.keras.callbacks import EarlyStopping,TensorBoard
 from tensorflow.keras.models import load_model
 
 # Load Model, scaler, encoders
