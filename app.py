@@ -17,11 +17,6 @@ with open('scaler.pickle', 'rb') as file:
     scaler = pickle.load(file)
 
 
-# model=load_model('Churn_Modelling.h5')
-# label_encoder_gender = pickle.load(open('label_encoder_gender.pkl', 'rb'))
-# onehot_encoder_geo = pickle.load(open('OHE_geo.pickle', 'rb'))
-# scaler = pickle.load(open('scaler.pickle', 'rb'))  
-
 ## TITLE OF THE APP
 st.title("Customer Churn Prediction")
 
